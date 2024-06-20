@@ -1,31 +1,70 @@
-// Events Delegation
+// KEYDOWN
 
-const buttonsContainer = document.querySelector('.buttons');
-const mainLink = document.querySelector('.buttons__link');
+// 1. document.body.addEventListener('keydown', function(ev) {
 
-document.addEventListener('click', function(ev) {
+//     if (ev.key === "ArrowDown") {
 
-    if (ev.target.matches('.click-me')) {
-        console.log('yeah, that`s correct!');
-        buttonsContainer.style.backgroundColor = 'green';
-    }
+//         console.log('you pressed down');
 
-    else if (ev.target.matches('.buttons__link')) {
-        console.log('you clicled on the link');
-        buttonsContainer.style.backgroundColor = 'white';
-    }
-
-    else {
-        console.log('nooo, that`s not right button');
-        buttonsContainer.style.backgroundColor = 'red';
+//         document.body.insertAdjacentHTML(
+//             "beforeend", 
+//             "<h1> You pressed arrow down.</h1>"
+//         );
+//     }
+// });
 
 
-    }
-})
+// 2. just pressing down some keys
 
-// practicing preventDefault
+// document.body.addEventListener('keydown', () => {
+//     console.log('you pressed down..');
+// });
 
-mainLink.addEventListener('click', (ev) => {
-    ev.preventDefault();
-    console.log(ev);
-});
+// 3. displaying the key was pressed
+
+// document.body.addEventListener('keydown', function(ev) {
+//     console.log(`${ev.key} was pressed on a keyword`);
+// })
+
+// 4. special key was pressed
+
+// document.body.addEventListener('keydown', function(ev) {
+//     if (ev.key === 'y') {
+//         console.log('you won!');
+//     }
+
+//     else {
+//         console.log('you lost!');
+//     }
+// })
+
+
+// KEYUP
+
+// 1. document.addEventListener('keyup', () => {
+//     console.log('you released the key!');
+// });
+
+// KEYPRESS  (not reccomended to use since 2023)
+
+// 1. document.addEventListener('keypress', () => {
+//     console.log('you PRESSED the key!');
+// });
+
+// INPUTS (very similar to keyboard event, but NOT keyboard event)
+
+// const inputField = document.getElementById('muInput');
+
+// inputField.addEventListener('input', () => {
+//     console.log('input was inputted');
+// })
+
+// document.body.addEventListener('keyup', (ev) => {
+//     if (ev.key === 'a' && ev.ctrlKey) {
+        
+//         document.body.insertAdjacentHTML(
+//                         "beforeend", 
+//                         `<h1> You pressed ${ev.key} + CTRL </h1>`
+//                     );
+//     }
+// });
