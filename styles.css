@@ -7,34 +7,15 @@ body {
     height: 100vh;
 }
 
-
-.istructions {
-    margin-top: 56px;
+form {
     display: flex;
     flex-direction: column;
+    gap: 24px;
 }
+ 
 
-.flag {
-    border-radius: 24px;
-    background-color: black;
-    height: 15vh;
-    width: 40vh;
-}
-
-.flag__line {
-    height: 50%;   
-    border: 2px solid black;
-
-}
-
-.flag__line--upper {
-    background-color: grey;
-    border-radius: 24px 24px 0 0;
-    border-bottom: none;
-}
-
-.flag__line--lower {
-    background-color: darkgrey;
-    border-radius: 0 0 24px 24px;
-    border-top: none;
+.personal-info, 
+.registration-info {
+    display: flex;
+    flex-direction: column;
 }

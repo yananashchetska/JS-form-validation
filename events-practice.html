@@ -7,26 +7,49 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <form 
+        method="post" 
+        action="/login" 
+        name="login"
+    >
 
-    <div class="flag">
-        <div class="flag__line flag__line--upper"></div>
-        <div class="flag__line flag__line--lower"></div>
-    </div>
-    <div class="istructions">
-        <h1 class="instructions__title">Shortcuts</h1>
-        <div class="instructions__text">
-            <p>You are going to paint the flag. Here are some tips:</p>
-            <br>
-            <p>press SHIFT + b and the upper color will change to BLUE</p>
-            <p>press CTRL + y and the lower color will change to YELLOW</p>
-            <br>
-            <p>press SHIFT + w and the upper color will change to WHITE</p>
-            <p>press CTRL + r and the lower color will change to RED</p>
-            <br>
-            <p>press SHIFT + r and the upper color will change to RED</p>
-            <p>press CTRL + b and the lower color will change to BLACK</p>
-        </div>
-    </div>
+      <div class="personal-info">
+        <label for="nameField">Your Name</label>
+        <input 
+            id="nameField"
+            type="text" 
+            name="userName" 
+            required
+        >
+        <label for="surnameField">Your Surname</label>
+        <input 
+            id="surnameField"
+            type="text" 
+            name="userSurname" 
+            required
+        >
+      </div>
+
+      <div class="registration-info">
+        <label for="emailField">Your Email</label>
+        <input 
+            id="emailField"
+            type="email" 
+            name="email" 
+            required
+        >
+        <label for="passwordField">Your Password</label>
+        <input 
+            id="passwordField"
+            type="password" 
+            name="password" 
+            required
+        >
+      </div>
+      <button type="submit">Submit</button>
+      
+      </form>
+      
 </body>
 <script src="./events.js"></script>
 </html>
