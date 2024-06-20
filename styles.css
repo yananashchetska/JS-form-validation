@@ -1,0 +1,72 @@
+
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+#grand-parent {
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 15vh;
+    background-color: mediumpurple;
+    cursor: pointer;
+    display: flex;
+    color: azure;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#parent {
+    display: flex;
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background-color: midnightblue;
+    cursor: pointer;
+    display: flex;
+    color: azure;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#child {
+    display: flex;
+    color: azure;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 60%;
+    background-color: mediumseagreen;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+#child:hover {
+    transform: scale(1.2);
+    border: 2px solid whitesmoke;
+}
+
+#parent:hover {
+    transform: scale(1.2);
+    border: 2px solid cyan;
+
+}
+
+#grand-parent:hover {
+    transform: scale(1.2);
+    border: 2px solid black;
+
+}
