@@ -1,18 +1,18 @@
-const childButton = document.getElementById('child');
-const parentButton = document.getElementById('parent');
-const grandButton = document.getElementById('grand-parent');
+// Events Delegation
 
-const clickHandler = function(e) {
-    console.log(`current target: ${e.currentTarget.id}`);
-    // e.stopPropagation();
-    console.log(`target: ${e.target.id}`);
-}
+const buttonsContainer = document.querySelector('.buttons');
 
-const myButtons = [childButton, parentButton, grandButton];
+document.addEventListener('click', function(ev) {
 
-// for (const button of myButtons) {
-//     button.addEventListener('click', clickHandler);
-// } 
-// parentButton.removeEventListener('click', clickHandler);
+    if (ev.target.matches('.click-me')) {
+        console.log('yeah, that`s correct!');
+        buttonsContainer.style.backgroundColor = 'green';
+    }
 
-document.getElementById('parent').addEventListener('click', clickHandler, {capture: true});
+    else {
+        console.log('nooo, that`s not right button');
+        buttonsContainer.style.backgroundColor = 'red';
+
+
+    }
+})

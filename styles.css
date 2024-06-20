@@ -7,66 +7,25 @@ body {
     height: 100vh;
 }
 
-
-
-#grand-parent {
+.buttons {
+    padding: 40px;
     display: flex;
-    position: relative;
-    width: 50%;
-    height: 15vh;
-    background-color: mediumpurple;
-    cursor: pointer;
-    display: flex;
-    color: azure;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: all 300ms;
-}
-
-#parent {
-    display: flex;
-    position: relative;
-    width: 70%;
-    height: 70%;
-    background-color: midnightblue;
-    cursor: pointer;
-    display: flex;
-    color: azure;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
     border-radius: 4px;
-    cursor: pointer;
-    transition: all 300ms;
 }
 
-#child {
-    display: flex;
-    color: azure;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    height: 60%;
-    background-color: mediumseagreen;
+.buttons__button {
+    font-size: 24px;
+    padding: 16px 24px;
+    background-color: hsl(160, 51%, 60%);
+    border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: all 300ms;
 }
 
-#child:hover {
+.buttons__button:hover {
     transform: scale(1.2);
-    border: 2px solid whitesmoke;
-}
-
-#parent:hover {
-    transform: scale(1.2);
-    border: 2px solid cyan;
-
-}
-
-#grand-parent:hover {
-    transform: scale(1.2);
-    border: 2px solid black;
-
+    background-color: rgb(137, 246, 210);
 }
