@@ -9,12 +9,13 @@
     }
 
     &__input {
+        display: block;
         padding: 8px;
         font-size: 24px;
         border-radius: 8px;
         border: 2px solid grey;
         outline: none;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
 
         &:hover, 
         &:focus {
@@ -22,12 +23,6 @@
         }
     }
     
-    &__section {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 24px;
-}
-
     &__button {
         padding: 8px 16px;
         font-size: inherit;
@@ -41,5 +36,25 @@
     }
 }
  
+.input-control {
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+}
 
+.error {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(186, 54, 54);
+    border-color:red;
+}
+
+.errored {
+    border-color: red;
+}
+
+.success {
+    border-color: green;
+}
 

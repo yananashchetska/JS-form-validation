@@ -118,7 +118,67 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
-
+var form = document.getElementById('form');
+var userName = document.getElementById('nameField');
+var userSurname = document.getElementById('surnameField');
+var email = document.getElementById('emailField');
+var password = document.getElementById('passwordField');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  validateFormInputs();
+});
+var setError = function setError(element, message) {
+  var inputControl = element.parentElement;
+  var errorElement = inputControl.querySelector('.error');
+  errorElement.innerText = message;
+  element.classList.add('errored');
+  element.classList.remove('success');
+  element.addEventListener('input', function (ev) {
+    ev.preventDefault();
+    setSuccess(element);
+  });
+};
+var setSuccess = function setSuccess(element) {
+  var inputControl = element.parentElement;
+  var errorElement = inputControl.querySelector('.error');
+  errorElement.innerText = '';
+  element.classList.remove('errored');
+  element.classList.add('success');
+};
+var isValidEmail = function isValidEmail(email) {
+  var reg = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return reg.test(String(email).toLowerCase());
+};
+var validateFormInputs = function validateFormInputs() {
+  var userNameValue = userName.value.trim();
+  var userSurnameValue = userSurname.value.trim();
+  var emailValue = email.value.trim();
+  var passwordValue = password.value.trim();
+  if (userNameValue === '') {
+    setError(userName, 'Username is required');
+  } else {
+    setSuccess(userName);
+  }
+  if (userSurnameValue === '') {
+    setError(userSurname, 'Surname is required');
+  } else {
+    setSuccess(userSurname);
+  }
+  if (emailValue === '') {
+    setError(email, 'Email is required');
+  } else if (!isValidEmail(emailValue)) {
+    setError(email, 'Provide a valid email address!');
+  } else {
+    setSuccess(email);
+  }
+  if (passwordValue === '') {
+    setError(password, 'Password is required!');
+  } else if (passwordValue.length < 8) {
+    setError(password, 'Password must be at least 8 characters!');
+  } else {
+    setSuccess(password);
+  }
+};
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -144,7 +204,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56933" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62354" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

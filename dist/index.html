@@ -8,30 +8,33 @@
         <script defer="" src="/src.e31bb0bc.js"></script>
 <script src="/styles.c86c3119.js"></script></head>
 <body>
-    <form class="form" method="post" action="/login" name="login">
+    <form id="form" class="form" method="post" action="/login" name="login">
 
-      <div class="form__section">
+        <div class="input-control">
+          <label class="form__label" for="nameField">Your Name</label>
+          <input id="nameField" class="form__input" type="text" name="userName">
+          <span class="error"></span>
+        </div>
 
-          <label for="nameField">Your Name
-        </label>
+        <div class="input-control">
+          <label class="form__label" for="surnameField">Your Surname</label>
+          <input id="surnameField" class="form__input" type="text" name="userSurname">
+          <span class="error"></span>
+        </div>
+      
+
+        <div class="input-control">
+          <label class="form__label" for="emailField">Your Email</label>
+          <input id="emailField" class="form__input" type="text" name="email">
+          <span class="error"></span>
+        </div>
         
-        <input id="nameField" class="form__input" type="text" name="userName" required="">
-        <div class="error"></div>
-
-        <label class="form__label" for="surnameField">Your Surname</label>
-        <input id="surnameField" class="form__input" type="text" name="userSurname" required="">
-      </div>
-        <div class="error"></div>
-
-      <div class="form__section">
-        <label class="form__label" for="emailField">Your Email</label>
-        <input id="emailField" class="form__input" type="email" name="email" required="">
-        <div class="error"></div>
-
-        <label class="form__label" for="passwordField">Your Password</label>
-        <input id="passwordField" class="form__input" type="password" name="password" required="">
-      </div>
-      <div class="error"></div>
+        <div class="input-control">
+          <label class="form__label" for="passwordField">Your Password</label>
+          <input id="passwordField" class="form__input" type="password" name="password">
+          <span class="error"></span>
+        </div>
+      
 
       <button class="form__button" type="submit">Submit
     </button>
